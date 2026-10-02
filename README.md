@@ -54,19 +54,6 @@ Entry point: `main2_main.m`
 4. Classify digits using **k-NN** (k=4, Euclidean distance, 70/30 train-test split)
 5. Evaluate with confusion matrix and per-digit accuracy
 
-## Results
-
-<!-- TODO: add figures to docs/figures/ and reference them below. Suggested: waveform and spectrum of a few digits, spectrogram of each digit, confusion matrix -->
-
-<!-- ![Spectrograms](docs/figures/spectrograms.png) -->
-
-| Features | Classifier | Accuracy |
-|---|---|---|
-| TODO (STFT) | k-NN (k=4) | TODO |
-| TODO (STFT + DWT) | k-NN (k=4) | TODO |
-
-<!-- TODO: add the per-digit accuracy / confusion matrix and a short discussion of which digits are confused and why -->
-
 ## Running
 
 Open MATLAB and run from the project root:
