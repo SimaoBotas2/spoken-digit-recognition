@@ -1,4 +1,4 @@
-# ATD Project — Spoken Digit Recognition
+# Spoken Digit Recognition
 
 Author: Simão Tomás Botas Carvalho
 
@@ -27,8 +27,10 @@ src/
   meta2/          # Milestone 2 — time-frequency analysis & classification
 data_raw/         # Raw .wav recordings
 data_processed/   # Generated .mat feature files (gitignored)
-docs/             # Project specification PDF
+docs/figures/     # Figures used in this README
 ```
+
+The project specification PDF is not included in the repository.
 
 ## Milestones
 
@@ -51,6 +53,19 @@ Entry point: `main2_main.m`
 3. Apply Discrete Wavelet Transform (DWT, `db4`, level 1) — approximate and detail energies
 4. Classify digits using **k-NN** (k=4, Euclidean distance, 70/30 train-test split)
 5. Evaluate with confusion matrix and per-digit accuracy
+
+## Results
+
+<!-- TODO: add figures to docs/figures/ and reference them below. Suggested: waveform and spectrum of a few digits, spectrogram of each digit, confusion matrix -->
+
+<!-- ![Spectrograms](docs/figures/spectrograms.png) -->
+
+| Features | Classifier | Accuracy |
+|---|---|---|
+| TODO (STFT) | k-NN (k=4) | TODO |
+| TODO (STFT + DWT) | k-NN (k=4) | TODO |
+
+<!-- TODO: add the per-digit accuracy / confusion matrix and a short discussion of which digits are confused and why -->
 
 ## Running
 
@@ -82,3 +97,5 @@ Key options for `meta1_main` (name-value pairs):
 - Signal Processing Toolbox (for `spectrogram`, `dwt`)
 - Wavelet Toolbox (for `dwt`)
 - Statistics and Machine Learning Toolbox (for `fitcknn`, `cvpartition`)
+
+`src/meta2/tests/optimize_stft_params.m` is a helper script used to choose the STFT window and overlap.
